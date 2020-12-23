@@ -1,0 +1,32 @@
+<div *ngIf="err" class="alert alert-danger m-2 text-center w-75 m-auto">
+  <strong class="text-capitalize">{{err}}</strong>
+</div>
+<form [formGroup]="loginForm" (ngSubmit)='getFormData(loginForm)' class="w-50 m-auto py-5">
+
+  <div class="form-group">
+    <label>E-Mail :</label>
+    <input [class.is-valid]='loginForm.get("email").valid == true' formControlName="email" type="email"
+      class="form-control" placeholder="Enter your E-Mail">
+    <small *ngIf='loginForm.get("email").invalid == true && loginForm.get("email").touched == true'
+      class="text-danger">* E-Mail is not valid</small>
+  </div>
+
+  <div class="form-group">
+    <label>Password :</label>
+    <input [class.is-valid]='loginForm.get("password").valid == true' formControlName="password" type="password"
+      class="form-control" placeholder="Enter your password">
+    <small *ngIf='loginForm.get("password").invalid == true && loginForm.get("password").touched == true'
+      class="text-danger">
+      ** Password must be<br>
+      * - At least 8 characters long, max length anything<br>
+      * - Include at least 1 lowercase letter<br>
+      * - Include at least 1 capital letter</small>
+    <!-- * - 1 number -->
+    <!-- * - 1 special character => !@#$%^&* -->
+  </div>
+
+  <button [disabled]='loginForm.invalid' type="submit" class="btn btn-outline-info w-100">Login</button>
+  <div class="w-100 mt-3 text-center">
+    <p>Don't have an account?<a routerLink='/register' class="text-primary text-decoration-none"> Sign Up</a></p>
+  </div>
+</form>

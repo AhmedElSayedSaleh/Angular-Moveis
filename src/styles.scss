@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+$bgColor: #131722;
+$lightBgColor: #24baef;
+$bgTransparent: rgba(36,186,239,0.6);
+$fontColor: #fff;
+$borderColor: #a8a8a83d;
+$borderHeight: 1px;
+$secondFontColor: #949cb0;
+
+$fontFamily: 'segoe ui light';
+$mainColor: #F8F8F8;
+$secondColor: #ef4836;
+$darkColor: #00010D;
+$boxShadow: 0 5px 13px 0px rgba(0,0,0,0.1);
+
+
+body{
+  background-color: $darkColor;
+  color: $mainColor;
+  font-family: 'Roboto', sans-serif;
+}
+
+a{
+  color: $fontColor;
+}
+
+.vote{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background-color: $lightBgColor;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+.movie-item {
+  width: 300px;
+}
+
+.movie-item img{
+  width: 100%;
+  border-radius: 20px;
+}

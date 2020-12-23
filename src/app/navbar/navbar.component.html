@@ -1,0 +1,38 @@
+<nav>
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-md-2">
+        logo
+      </div>
+      <div class="col-md-8">
+        <ul *ngIf='isLogin==true' class="list-unstyled d-flex justify-content-around">
+          <li>
+            <a routerLink='/home'>Home</a>
+          </li>
+          <li>
+            <a routerLink='/home'>About</a>
+          </li>
+          <li>
+            <a routerLink='/home'>TV</a>
+          </li>
+          <li>
+            <a routerLink='/home'>Movies</a>
+          </li>
+          <li>
+            <a routerLink='/home'>Person</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <ul class="list-unstyled d-flex justify-content-around">
+          <li>
+            <a routerLink='register'>Sign Up</a>
+          </li>
+          <li>
+            <a routerLink='login'>Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
