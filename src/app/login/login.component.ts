@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
   err: string;
 
   loginForm = new FormGroup({
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [Validators.required,
+    email: new FormControl('podya@podya', [Validators.required, Validators.email]),
+    password: new FormControl('PodyaPodya', [Validators.required,
     Validators.pattern('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$')])
     /* ^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$ */
   });

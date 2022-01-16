@@ -13,11 +13,11 @@ export class AuthService {
   userData = new BehaviorSubject(null);
 
   signUp(data): Observable<any> {
-    return this._HttpClient.post('http://routeegypt.herokuapp.com/signup', data);
+    return this._HttpClient.post('https://routeegypt.herokuapp.com/signup', data);
   }
 
   logIn(data): Observable<any> {
-    return this._HttpClient.post('http://routeegypt.herokuapp.com/signin', data);
+    return this._HttpClient.post('https://routeegypt.herokuapp.com/signin', data);
   }
 
   saveUserData(logUser, token): any {
